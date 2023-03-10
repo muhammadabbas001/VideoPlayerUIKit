@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jlr-eo-eY0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="dkH-EG-5qZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="jlr-eo-eY0" customClass="ViewController" customModule="PracticeUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IjR-tA-5vW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mm1-av-oJH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="beu-XK-ZJk">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKq-3R-1Qv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="pauseButtonAction:" destination="jlr-eo-eY0" eventType="touchUpInside" id="WFE-0t-3ZA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20b-PC-Hoc">
+                                <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.80800002810000005" blue="0.41200000050000002" alpha="0.59537864839999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jwe-aX-aMK"/>
+                                    <constraint firstAttribute="width" constant="50" id="uE4-Ab-HQp"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="play.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <state key="selected" image="play.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="jlr-eo-eY0" eventType="touchUpInside" id="mFN-fG-6X6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cjJ-xt-7Lf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Mm1-av-oJH" secondAttribute="bottom" id="ATo-CK-G1g"/>
+                            <constraint firstItem="SKq-3R-1Qv" firstAttribute="top" secondItem="IjR-tA-5vW" secondAttribute="top" id="Dm7-vp-XN2"/>
+                            <constraint firstItem="20b-PC-Hoc" firstAttribute="centerY" secondItem="IjR-tA-5vW" secondAttribute="centerY" id="HRh-aF-H4v"/>
+                            <constraint firstItem="Mm1-av-oJH" firstAttribute="top" secondItem="IjR-tA-5vW" secondAttribute="top" id="T6X-Ed-vXK"/>
+                            <constraint firstItem="20b-PC-Hoc" firstAttribute="centerX" secondItem="IjR-tA-5vW" secondAttribute="centerX" id="hBI-wB-cQ1"/>
+                            <constraint firstItem="Mm1-av-oJH" firstAttribute="leading" secondItem="cjJ-xt-7Lf" secondAttribute="leading" id="i5t-4s-RF4"/>
+                            <constraint firstItem="SKq-3R-1Qv" firstAttribute="trailing" secondItem="cjJ-xt-7Lf" secondAttribute="trailing" id="qbG-Wd-a0b"/>
+                            <constraint firstItem="SKq-3R-1Qv" firstAttribute="leading" secondItem="cjJ-xt-7Lf" secondAttribute="leading" id="rXh-ig-Tbh"/>
+                            <constraint firstItem="beu-XK-ZJk" firstAttribute="centerX" secondItem="IjR-tA-5vW" secondAttribute="centerX" id="uqI-nt-wnM"/>
+                            <constraint firstItem="cjJ-xt-7Lf" firstAttribute="trailing" secondItem="Mm1-av-oJH" secondAttribute="trailing" id="wZM-vE-5tq"/>
+                            <constraint firstItem="beu-XK-ZJk" firstAttribute="centerY" secondItem="IjR-tA-5vW" secondAttribute="centerY" id="whK-dW-ire"/>
+                            <constraint firstAttribute="bottom" secondItem="SKq-3R-1Qv" secondAttribute="bottom" id="zJv-cR-Ygk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="beu-XK-ZJk" id="YDz-GS-Dbu"/>
+                        <outlet property="pauseButton" destination="SKq-3R-1Qv" id="19o-NV-1sV"/>
+                        <outlet property="playButton" destination="20b-PC-Hoc" id="jCE-g7-SNV"/>
+                        <outlet property="videoView" destination="Mm1-av-oJH" id="MNc-JG-Sfz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shc-mn-Cei" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="886.25954198473278" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
